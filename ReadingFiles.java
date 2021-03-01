@@ -4,7 +4,7 @@ public class ReadingFiles {
     public static void main(String[] args) {
 
         Hashtable<String, Integer> words = new Hashtable<>();
-        In file = new In("http://www.inf.ed.ac.uk/teaching/courses/inf1/op/2020/labs/resources/melville-moby_dick.txt"); //example .txt
+        In file = new In("example.txt"); //example .txt
         while (!file.isEmpty()) {
 
             String word = file.readString().toLowerCase();
