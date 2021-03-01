@@ -4,7 +4,7 @@ public class ReadingFiles {
     public static void main(String[] args) {
 
         Hashtable<String, Integer> words = new Hashtable<>();
-        In file = new In("example.txt"); //example .txt
+        In file = new In("example.txt");
         while (!file.isEmpty()) {
 
             String word = file.readString().toLowerCase();
