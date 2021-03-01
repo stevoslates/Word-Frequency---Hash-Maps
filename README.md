@@ -1,4 +1,4 @@
-# Word-Frequency---Hash-Maps
+# Word-Frequency with Hash-Maps
 This is a word frequency program for txt files in Java - using the 'stdlib' library.
 The program uses hash maps to store each word and then increment the mapped value if it is found again. 
 All words are made to be lowercased and stripped of punctuation. 
