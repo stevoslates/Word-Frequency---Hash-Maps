@@ -4,11 +4,12 @@ public class ReadingFiles {
     public static void main(String[] args) {
 
         Hashtable<String, Integer> words = new Hashtable<>();
-        In file = new In("http://www.gutenberg.org/files/39063/39063-0.txt"); //example .txt
+        In file = new In("http://www.inf.ed.ac.uk/teaching/courses/inf1/op/2020/labs/resources/melville-moby_dick.txt"); //example .txt
         while (!file.isEmpty()) {
 
             String word = file.readString().toLowerCase();
-            word = removePunctuations(word);
+           // word = removePunctuations(word);
+            word = word.replaceAll("\\W+", "");
             int count;
             if (words.containsKey(word)) {
                 count = words.get(word);
@@ -44,16 +45,4 @@ public class ReadingFiles {
         }
         return temp;
     }
-
-
-    public static String removePunctuations(String s) {
-        StringBuilder result = new StringBuilder();
-        for (Character c : s.toCharArray()) {
-            if(Character.isLetterOrDigit(c))
-                result.append(c);
-        }
-        return result.toString();
-    }
-
 }
-
